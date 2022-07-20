@@ -27,7 +27,8 @@ public class Main {
 //
 //        В вашей компании пятница является днем отчетным.
 //
-//                Нам нужно написать программу, которая считает дни месяца по датам, определяет, какой день пятница, и выводит сообщение с напоминанием о том, что нужно подготовить еженедельный отчет.
+//                Нам нужно написать программу, которая считает дни месяца по датам, определяет, какой день пятница, и
+//                выводит сообщение с напоминанием о том, что нужно подготовить еженедельный отчет.
 //
 //        Условия задачи:
 //
@@ -70,5 +71,38 @@ public class Main {
 
         System.out.println("Hello SkyPRO!");
 //        Задание 1
+        int i = 1;
+        while (  i < 11 ){                      //Выполнять цикл пок i меньше 11
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println();                   //Начальная точка i - 1. Выполнять цикл пока i болше 0
+        for ( i-- ; i > 0 ; i-- ) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        //Задача 2
+
+        int monthDay = 31;
+        int noFirstFriday = 4;
+        for (int d = 1; d <= monthDay; d++) {
+            if (d == noFirstFriday) {
+                System.out.println("Сегодня пятница, " + noFirstFriday + "-е число. Необходимо подготовить отчет.");
+                noFirstFriday = noFirstFriday + 7;
+            }
+        }
+
+        //Задача 3
+
+        int currentYear = 2022;
+        int startyYear = currentYear - 200;
+        int finshYear = currentYear + 100;
+        for (int y = 0; y <= finshYear; ){
+            if (y >= startyYear && y <= finshYear) {
+                System.out.println("Год появления кометы " + y + "год");
+            }
+            y = y + 79;
+        }
     }
 }
